@@ -1,0 +1,51 @@
+<template>
+  <div class="foods-index">
+    <h1>All Foods</h1>
+
+    <form v-on:submit.prevent="search()">
+      <input type="text" v-model="searchTerm" placeholder="Search by Name">
+      <input type="submit" value="Search">
+    </form>
+
+
+    <div v-for="food in foods">
+      <router-link v-bind:to="'/foods/' + food.id">
+        <h2>{{ food.name }}</h2>
+      </router-link>
+    </div>
+  </div>
+</template>
+
+<style>
+img {
+  width: 250px;
+}
+</style>
+
+<script>
+var axios = require('axios');
+export default {
+  data: function() {
+    return {
+      foods: [],
+      searchTerm: ""
+    };
+  },
+  created: function() {
+    axios
+      .get("/api/foods")
+      .then(response => {
+        this.foods = response.data;
+      });
+  },
+  methods: {
+    search: function() {
+      axios
+        .get("/api/foods?search=" + this.searchTerm)
+        .then(response => {
+          this.foods = response.data;
+        });
+    }
+  }
+};
+</script>
