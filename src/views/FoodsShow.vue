@@ -6,11 +6,21 @@
     <h5>Saturated Fat: {{ food.saturated_fat }}</h5>
     <h5>Sugar: {{ food.sugar }}</h5>
     <h5>Sodium: {{ food.sodium }}</h5>
-    <h5>Default Filter {{ food.default_filter }}</h5>
+    <h5>Default Filter: {{ food.default_filter }}</h5>
+    <h5>Diets</h5>
+    <ul>
+      <li v-for="diet in food.diets"> {{ diet.name }} </li>
+    </ul>
+    <h5>Suggestions</h5>
+    <ul>
+       <li v-for="suggestion in food.suggestions.map { |suggestion| 
+    render partial: 'api/suggestions/suggestion.json.jb', locals: {suggestion: :suggestion}"> {{ suggestion.filter }} </li>
+    </ul>
+
+
 
     <div>
       <router-link v-bind:to=" '/foods/' + food.id + '/edit' ">Edit</router-link>
-      <button v-on:click="destroyFood()">Destroy</button>
     </div>
   </div>
 </template>
