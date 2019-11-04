@@ -7,14 +7,13 @@
     <h5>Sugar: {{ food.sugar }}</h5>
     <h5>Sodium: {{ food.sodium }}</h5>
     <h5>Default Filter: {{ food.default_filter }}</h5>
-    <h5>Diets</h5>
+    <h5>Diets:</h5>
     <ul>
       <li v-for="diet in food.diets"> {{ diet.name }} </li>
     </ul>
-    <h5>Suggestions</h5>
+    <h5>Suggestions:</h5>
     <ul>
-       <li v-for="suggestion in food.suggestions.map { |suggestion| 
-    render partial: 'api/suggestions/suggestion.json.jb', locals: {suggestion: :suggestion}"> {{ suggestion.filter }} </li>
+       <li v-for="healthy_option in food.healthy_options"> {{ healthy_option.name }} </li>
     </ul>
 
 
