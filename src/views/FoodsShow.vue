@@ -9,7 +9,7 @@
     <h5>Default Filter: {{ food.default_filter }}</h5>
     <h5>Diets:</h5>
     <ul>
-      <li v-for="diet in food.diets"> {{ diet.name }} </li>
+      <li v-for="diet_name in food.diet_names"> {{ diet_name }} </li>
     </ul>
     <h5>Suggestions:</h5>
     <ul>
@@ -40,7 +40,8 @@ export default {
         saturated_fat: "",
         sugar: "",
         sodium: "",
-        default_filter: ""
+        default_filter: "",
+        diets: []
       }
     };
   },
