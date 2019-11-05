@@ -1,51 +1,20 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-      <router-link class="navbar-brand" to="/">All Foods</router-link>
   
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-
-
-
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/recipes/new">New Food</router-link>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <router-link class="dropdown-item" to="/viewfoods"> View Foods </router-link>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline md-form mr-auto mb-4">
-          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
-          <!-- <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button> -->
-        </form>
-      </div>
-    </nav>
-
-  
+            <div class="search-inline">
+                <form>
+                    <input type="text" class="form-control" placeholder="Type and hit enter...">
+                    <button type="submit"><i class="ti-search"></i></button>
+                    <a href="javascript:void(0)" class="search-close"><i class="ti-close"></i></a>
+                </form>
+            </div><!--/search form-->
             <div class="container">
 
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img class='logo logo-dark' src="images/logo.png" alt="">
-                    <img class='logo logo-light hidden-md-down' src="images/logo-light.png" alt="">
+    
                 </a>
                 <div  id="navbarNavDropdown" class="navbar-collapse collapse">
                     <ul class="navbar-nav ml-auto">
@@ -357,14 +326,151 @@
                 </div>
                 <div class=" navbar-right-elements">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="search-open"><i class="ti-search"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class=" menu-btn"><i class="ti-shopping-cart"></i> <span class="badge badge-default">3</span></a></li>
+                        <!-- <li class="list-inline-item"><a href="javascript:void(0)" class="search-open"><i class="ti-search"></i></a></li> -->
                     </ul>
                 </div><!--right nav icons-->
             </div>
         </nav>
+        <div class="bg-parallax fullscreen parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg10.jpg")'>
+            <div class="d-flex align-items-center">
+                <div class="container">
+                    <div class=" row">
+                        <div class="col-lg-10 ml-auto mr-auto text-center">
+                            <div class="hero-text-style1">
+                                <div class="tlt h1 font700 text-white text-capitalize mb20">
+                                    <ul class="texts">                                       
+                                        <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Healthy Food Options</li>
+                                        <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Healthy Alternatives</li>
+                                        <li class="text-capitalize" data-out-effect="fadeOut" data-in-effect="fadeIn">Healthy Foods</li>
+                                    </ul>
+                                </div><!--/.tlt-->
+                                <p class="lead text-white-gray">
+                                    Make Healthier Food Choices
+                                </p>
+                                <a href="#" class="btn btn-rounded btn-white-outline">Better Nutrition</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--hero-->
 
-    <router-view/>
+        <router-view/>
+
+<footer class="footer footer-standard pt50 pb10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb40">
+                        <h3>Why eat well?</h3>
+                         <p>
+                  We've all heard it before, but it's true: eating well is really good for you. When you eat a well-balanced diet:
+                  your energy levels will be optimised
+                  you’ll feel healthier andstronger
+                  your immune system will be tougher
+                  you’ll think more clearly and handle stress better
+                  your chances of developing diabetes, cancer and cardiovascular disease will decrease.
+            </p>
+            <a href="#" class="btn btn-white-outline btn-sm">A Healthy Outside Starts from the Inside</a>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb40">
+                        <h3>Quick links</h3>
+                        <ul class="list-unstyled footer-list-item">
+                            <li>
+                                <a href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   News
+                                </a>
+                            </li>
+                             <li>
+                                <a href="#">
+                                   FAQS
+                                </a>
+                            </li>
+                             <li>
+                                <a href="#">
+                                   Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Term & conditions
+                                </a>
+                            </li>
+                             
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Choose Health</h3>
+                       <ul class="list-unstyled latest-news">
+                            <li class="media">
+                               <a href="#"> <img class="d-flex mr-3 img-fluid" width="64" src="images/img1.jpg" alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1"><a href="#">Eat Smarter</a></h5>
+                                    November 14, 2019
+                                </div>
+                            </li>
+                            <li class="media my-3">
+                                <a href="#"> <img class="d-flex mr-3 img-fluid" width="64" src="images/img2.jpg" alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1"><a href="#">Healthy Food Facts</a></h5>
+                                   Jan 05, 2019
+                                </div>
+                            </li>
+                            <li class="media">
+                                <a href="#"> <img class="d-flex mr-3 img-fluid" width="64" src="images/img5.jpg" alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1"><a href="#">Health requires healthy food</a></h5>
+                                    March 15, 2019
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Make the right choices</h3>
+                        <img src="images/map-img.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </footer><!--/footer-->
+        <div class="footer-bottomAlt">
+            <div class="container">
+                <div class="row">
+                      <div class="col-lg-7">
+                        <div class="clearfix">
+                           <a href="#" class="social-icon-sm si-dark si-facebook si-dark-round">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-twitter si-dark-round">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-g-plus si-dark-round">
+                            <i class="fa fa-google-plus"></i>
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-skype si-dark-round">
+                            <i class="fa fa-skype"></i>
+                            <i class="fa fa-skype"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-linkedin si-dark-round">
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
+                        </a>  
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <span>&copy; Copyright 2019. All Right Reserved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
 
   </div>
 </template>
