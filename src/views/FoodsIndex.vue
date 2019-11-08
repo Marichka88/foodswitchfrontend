@@ -1,6 +1,8 @@
 <template>
   <div class="foods-index">
-    <h1>All Foods</h1>
+    <h1>
+      <p class="text-success">Please Make Your Food Choice or Use a Search Box</p>
+    </h1>
 
     <form v-on:submit.prevent="search()">
       <input type="text" v-model="searchTerm" placeholder="Search by Name">
