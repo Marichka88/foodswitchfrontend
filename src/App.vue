@@ -66,7 +66,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <router-link class="navbar-brand" to="/"><img src="/images/logo.png" alt=""></router-link>
+        <router-link class="navbar-brand" to="/"><img src="/images/apple.png" alt=""></router-link>
         <div  id="navbarNavDropdown" class="navbar-collapse collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -85,12 +85,12 @@
 
     <vue-particles
       class="particles-top"
-      color="#bbffbb"
+      color="#FFFF00"
       :particleOpacity="0.7"
-      :particlesNumber="80"
+      :particlesNumber="90"
       shapeType="circle"
       :particleSize="6"
-      linesColor="#ffbbff"
+      linesColor="#FF6D00"
       :linesWidth="1"
       :lineLinked="true"
       :lineOpacity="0.4"
@@ -225,13 +225,14 @@
 
 <style>
 body {
-  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-/*  background-image: url('/images/tryme.jpeg'); 
+  /*font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;*/
+  font-family: "Lucida Bright", Georgia, serif; font-size: 24px;
+  background-image: url('/images/background.jpeg'); 
   background-position: center;
   background-repeat: repeat;
-  background-size: cover;*/
-  max-width: 100% !important;
-  padding: 0px !important;
+  background-size: cover
+  /*max-width: 100% !important;
+  padding: 0px !important;*/
 }
 
 .particles-top {

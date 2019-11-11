@@ -1,5 +1,6 @@
 <template>
-  <div class="foods-show">
+  <div class="foods-show contrast-bg" >
+
     <div class="row">
       <div class="col-lg-6">
         <h1>{{ food.name }}</h1>
@@ -110,7 +111,11 @@
 /*.checked {
   color: orange;
 }*/
-
+.contrast-bg {
+  background-color: white; 
+  padding: 30px;
+  margin-bottom: 30px;
+}
 .img-show {
   width: 100%;
   /*max-height: 300px;*/

@@ -34,11 +34,12 @@
                 <div class="form-group">
                             <!-- <label for="exampleSelect1">Choose Your Filter</label> -->
                             <select class="form-control" id="exampleSelect1">
-                                <option>Choose Your Filter</option>
+                                <option>Please Choose the Filter</option>
                                 <option>SaltSwitch</option>
                                 <option>SugarSwitch</option>
                                 <option>FatSwitch</option>
                                 <option>EnergySwitch</option>
+                                <option>GlutenSwitch</option>
                             </select>
 
                   </div>
