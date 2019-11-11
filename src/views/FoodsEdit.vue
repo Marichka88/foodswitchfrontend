@@ -1,43 +1,60 @@
 <template>
   <div class="foods-edit">
-    
-  <h1>Edit Food</h1>
-    <ul>
-      <li v-for="error in errors">{{ error }}</li>
-    </ul>
 
-    <form v-on:submit.prevent="submit()">
-      <div>
-        Name: <input type="text" v-model="food.name">
-      </div>
+    <div class="row pb30">
+        <div class="col-lg-4 col-md-6 mr-auto ml-auto col-sm-8">
+            <h3 class="text-white text-center mb30">Edit Food</h3>
+            <ul>
+              <li v-for="error in errors">{{ error }}</li>
+            </ul>
+            <form v-on:submit.prevent="submit()">
+                <div class="form-group">
+                  <input type="text" class="form-control" v-model="food.name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="integer" class="form-control" v-model="food.energy" placeholder="Energy">
+                </div>
 
-      <div>
-        Energy: <input type="integer" v-model="food.energy">
-      </div>
+                <div class="form-group">
+                  <input type="integer" class="form-control" v-model="food.fat" placeholder="Fat">
+                </div>
 
-      <div>
-        Fat: <input type="integer" v-model="food.fat">
-      </div>
+                <div class="form-group">
+                  <input type="integer" class="form-control" v-model="food.saturated_fat" placeholder="Saturated Fat">
+                </div>
+                <div class="form-group">
+                  <input type="integer" class="form-control" v-model="food.sugar" placeholder="Sugar">
+                </div>
+                <div class="form-group">
+                  <input type="integer" class="form-control" v-model="food.sodium" placeholder="Sodium">
+                </div>
+                 <div class="form-group">
+                  <!-- <input type="text" class="form-control" v-model="food.default_filter" placeholder="Default Filter"> -->
+                </div>
+                <div class="form-group">
+                            <!-- <label for="exampleSelect1">Choose Your Filter</label> -->
+                            <select class="form-control" id="exampleSelect1">
+                                <option>Choose Your Filter</option>
+                                <option>SaltSwitch</option>
+                                <option>SugarSwitch</option>
+                                <option>FatSwitch</option>
+                                <option>EnergySwitch</option>
+                            </select>
 
-      <div>
-        Saturated Fat: <input type="integer" v-model="food.saturated_fat">
-      </div>
+                  </div>
 
-      <div>
-        Sugar: <input type="integer" v-model="food.sugar">
-      </div>
 
-      <div>
-        Sodium: <input type="integer" v-model="food.sodium">
-      </div>
 
-      <div>
-        Default Filter: <input type="integer" v-model="food.default_filter">
 
-      </div>
 
-      <input type="submit" value="Update">
-    </form>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-rounded btn-primary btn-block">Update</button>
+                </div>
+                <hr>
+            </form>
+        </div>
+    </div>
+
   </div>
 </template>
 

@@ -1,109 +1,108 @@
 <template>
   <div class="foods-show">
-    <h1>{{ food.name }}</h1>
-    <img v-bind:src="food.image_url">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>{{ food.name }}</h1>
+        <span class="heading">Item's Rating</span>
+        <span class="fa fa-star" v-bind:class="{checked: food.stars >= 1}"></span>
+        <span class="fa fa-star" v-bind:class="{checked: food.stars >= 2}"></span>
+        <span class="fa fa-star" v-bind:class="{checked: food.stars >= 3}"></span>
+        <span class="fa fa-star" v-bind:class="{checked: food.stars >= 4}"></span>
+        <span class="fa fa-star" v-bind:class="{checked: food.stars >= 5}"></span>
+        
+        <hr style="border:3px solid #f1f1f1">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <h5>Energy: {{ food.energy }}</h5>
 
-<span class="heading">Item's Rating</span>
-<span class="fa fa-star" v-bind:class="{checked: food.stars >= 1}"></span>
-<span class="fa fa-star" v-bind:class="{checked: food.stars >= 2}"></span>
-<span class="fa fa-star" v-bind:class="{checked: food.stars >= 3}"></span>
-<span class="fa fa-star" v-bind:class="{checked: food.stars >= 4}"></span>
-<span class="fa fa-star" v-bind:class="{checked: food.stars >= 5}"></span>
-<hr style="border:3px solid #f1f1f1">
+        <h5>Fat: {{ food.fat }}</h5>
+        <h5>Saturated Fat: {{ food.saturated_fat }}</h5>
+        <h5>Sugar: {{ food.sugar }}</h5>
+        <h5>Sodium: {{ food.sodium }}</h5>
+        <h5>Default Filter: {{ food.default_filter }}</h5>
+        <h5>Diets:</h5>
+        <ul>
+          <li v-for="diet_name in food.diet_names"> {{ diet_name }} </li>
+        </ul>
+        <h5>Healthy Alternatives:</h5>
 
-<div class="row">
-  <div class="side">
-    <div>Energy</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-5"></div>
-      <div></div>
+        <ul>
+           <li v-for="healthy_option in food.healthy_options">
+             <router-link v-bind:to="'/foods/' + healthy_option.id">
+               {{ healthy_option.name }}
+             </router-link>
+          </li>
+        </ul>
+
+        <div>
+          <router-link v-bind:to=" '/foods/' + food.id + '/edit' ">Make Changes</router-link>
+        </div>
+
+      </div>  
+      <div class="col-lg-6">
+        <img class="img-show" v-bind:src="food.image_url">
+      </div>  
     </div>
-  </div>
-  <div class="side right">
-    <div>{{food.energy}}</div>
-  </div>
-  <div class="side">
-    <div>Fat</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-4"></div>
+    <hr style="border:3px solid #f1f1f1">
+
+    <div class="bar-row mb-5">
+      <div class="side">
+        <div>Energy</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-5"></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>{{food.energy}}</div>
+      </div>
+      <div class="side">
+        <div>Fat</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-4"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>{{food.fat}}</div>
+      </div>
+      <div class="side">
+        <div>Saturated Fat</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-3"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>{{food.saturated_fat}}</div>
+      </div>
+      <div class="side">
+        <div>Sugar</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-2"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>{{food.sugar}}</div>
+      </div>
+      <div class="side">
+        <div>Sodium</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-1"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>{{food.sodium}}</div>
+      </div>
     </div>
-  </div>
-  <div class="side right">
-    <div>{{food.fat}}</div>
-  </div>
-  <div class="side">
-    <div>Saturated Fat</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-3"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>{{food.saturated_fat}}</div>
-  </div>
-  <div class="side">
-    <div>Sugar</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-2"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>{{food.sugar}}</div>
-  </div>
-  <div class="side">
-    <div>Sodium</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-1"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>{{food.sodium}}</div>
-  </div>
-</div>
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <h5>Energy: {{ food.energy }}</h5>
-
-    <h5>Fat: {{ food.fat }}</h5>
-    <h5>Saturated Fat: {{ food.saturated_fat }}</h5>
-    <h5>Sugar: {{ food.sugar }}</h5>
-    <h5>Sodium: {{ food.sodium }}</h5>
-    <h5>Default Filter: {{ food.default_filter }}</h5>
-    <h5>Diets:</h5>
-    <ul>
-      <li v-for="diet_name in food.diet_names"> {{ diet_name }} </li>
-    </ul>
-    <h5>Healthy Alternatives:</h5>
-
-    <ul>
-       <li v-for="healthy_option in food.healthy_options"> {{ healthy_option.name }} </li>
-    </ul>
-    
- <!-- <li v-for="healthy_option in food.healthy_options"> {{ healthy_option.name }} </li>
- <div>
-      <router-link v-bind:to="heathy_option">
-        <h2>{{ healthy_option.name }}</h2>
-      </router-link>
-    </div> -->
-
-    <div>
-      <router-link v-bind:to=" '/foods/' + food.id + '/edit' ">Make Changes</router-link>
-
-    </div>
   </div>
 </template>
 
@@ -111,15 +110,11 @@
 /*.checked {
   color: orange;
 }*/
-{
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial;
-  margin: 0 auto; /* Center website */
-  max-width: 800px; /* Max width */
-  padding: 20px;
+.img-show {
+  width: 100%;
+  /*max-height: 300px;*/
+  overflow: hidden;
 }
 
 .heading {
@@ -154,7 +149,7 @@ body {
 }
 
 /* Clear floats after the columns */
-.row:after {
+.bar-row:after {
   content: "";
   display: table;
   clear: both;
@@ -221,6 +216,14 @@ export default {
           this.$router.push("/");
         });
     }
+  },
+  beforeRouteUpdate (to, from, next) {
+    axios
+      .get("/api/foods/" + to.params.id)
+      .then(response => {
+        this.food = response.data;
+        next()
+      });
   }
 };
 </script>

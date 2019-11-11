@@ -1,27 +1,49 @@
 <template>
   <div class="foods-index">
+
     <h1>
-      <p class="text-success">Please Make Your Food Choice or Use a Search Box</p>
+      <p class="text-success text-center p-3">Please Make Your Food Choice or Use a Search Box</p>
     </h1>
 
-    <form v-on:submit.prevent="search()">
-      <input type="text" v-model="searchTerm" placeholder="Search by Name">
-      <input type="submit" value="Search">
+    <form class="d-flex justify-content-center form-inline mb-4" v-on:submit.prevent="search()">
+        <label class="sr-only" for="inlineFormInput">Search</label>
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" v-model="searchTerm" placeholder="Search by Name">
+        <button type="submit" class="btn btn-success">Search</button>
     </form>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VUyEPf-IvdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <div v-for="food in foods">
-      <router-link v-bind:to="'/foods/' + food.id">
-        <h2>{{ food.name }}</h2>
-      </router-link>
+    <div class="row">
+      <div class="col-lg-6" v-for="food in foods">
+        <div class="card mb-3">
+          <router-link v-bind:to="'/foods/' + food.id">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img v-bind:src="food.image_url" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ food.name }}</h5>
+                  <p class="card-text">Stars: {{ food.stars }}</p>
+                </div>
+              </div>
+            </div>
+          </router-link>
+        </div>
+      </div>
     </div>
+    <div class="video-container">
+      <div class="d-flex justify-content-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VUyEPf-IvdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
   </div>
 </template>
 
-<style>
-img {
-  width: 250px;
+<style>\
+.video-container {
+  margin: 30px 0px;
+  background-color: white;
 }
 </style>
 
