@@ -3,12 +3,6 @@
     <h1>{{ food.name }}</h1>
     <img v-bind:src="food.image_url">
 
-     <!-- <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span> -->
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <span class="heading">Item's Rating</span>
@@ -30,7 +24,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>150</div>
+    <div>{{food.energy}}</div>
   </div>
   <div class="side">
     <div>Fat</div>
@@ -41,7 +35,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>63</div>
+    <div>{{food.fat}}</div>
   </div>
   <div class="side">
     <div>Saturated Fat</div>
@@ -52,7 +46,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>15</div>
+    <div>{{food.saturated_fat}}</div>
   </div>
   <div class="side">
     <div>Sugar</div>
@@ -63,7 +57,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>6</div>
+    <div>{{food.sugar}}</div>
   </div>
   <div class="side">
     <div>Sodium</div>
@@ -74,7 +68,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>20</div>
+    <div>{{food.sodium}}</div>
   </div>
 </div>
 
@@ -93,14 +87,15 @@
     <ul>
       <li v-for="diet_name in food.diet_names"> {{ diet_name }} </li>
     </ul>
-    <h5>Suggestions:</h5>
+    <h5>Healthy Alternatives:</h5>
 
     <ul>
        <li v-for="healthy_option in food.healthy_options"> {{ healthy_option.name }} </li>
     </ul>
 
     <div>
-      <router-link v-bind:to=" '/foods/' + food.id + '/edit' ">Edit</router-link>
+      <router-link v-bind:to=" '/foods/' + food.id + '/edit' ">Make Changes</router-link>
+
     </div>
   </div>
 </template>

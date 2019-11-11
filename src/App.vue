@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    
+
     <div class="search-inline">
       <form>
         <input type="text" class="form-control" placeholder="Type and hit enter...">
@@ -14,9 +14,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="index.html">
-        
+
       </a>
-      
+
       <div  id="navbarNavDropdown" class="navbar-collapse collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown active">
@@ -33,7 +33,7 @@
                   <li><a href="shop-home.html" class="dropdown-item">Shop home</a></li>
                   <li><a href="shop-full.html" class="dropdown-item">Shop Full width</a></li>
                   <li><a href="shop-sidebar.html" class="dropdown-item">Shop Sidebar</a></li>
-                  
+
                   <li><a href="shop-item.html" class="dropdown-item">Shop item</a></li>
                   <li><a href="shop-cart.html" class="dropdown-item">Shop cart</a></li>
                   <li><a href="shop-checkout.html" class="dropdown-item">Shop checkout</a></li>
@@ -137,7 +137,7 @@
                         <li><a href="folio-grid-6.html"> 6 Columns</a></li>
                         <li><hr></li>
                         <li><a href="folio-ajax-load.html">Ajax - Load More</a></li>
-                        
+
                         <li><a href="folio-ajax-modal.html"> Ajax - Modal</a></li>
                       </ul>
                     </div>
@@ -181,7 +181,7 @@
                         <li><hr></li>
                         <li><a href="folio-single-gallery.html">Single - Gallery</a></li>
                         <li><a href="folio-single-video.html"> Single - Video</a></li>
-                        
+
                       </ul>
                     </div>
                   </div>
@@ -311,7 +311,7 @@
                         <li><a href="shortcode-charts.html"><i class="ti-bar-chart"></i> Charts</a></li>
                         <li><a href="shortcode-responsive-videos.html"><i class="ti-control-play"></i> Responsive Videos</a></li>
                         <li><a href="shortcode-gmap.html"><i class="ti-map"></i> Google Map</a></li>
-                        
+
                         <li><a href="shortcode-modals.html"><i class="ti-close"></i> Modals</a></li>
                         <li><a href="shortcode-blockquotes.html"><i class="ti-quote-right"></i> Blockquotes</a></li>
                         <li><a href="shortcode-paginations.html"><i class="ti-arrow-circle-right"></i> Paginations</a></li>
@@ -332,7 +332,7 @@
       </div><!--right nav icons-->
     </div>
   </nav>
-  <div class="bg-parallax fullscreen parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg10.jpg")'>
+  <div class="bg-parallax fullscreen parallax-overlay" data-jarallax='{"speed": 0.3}' style='background-image: url("images/bg10.jpg")'>
     <div class="d-flex align-items-center">
       <div class="container">
         <div class=" row">
@@ -355,9 +355,13 @@
       </div>
     </div>
   </div><!--hero-->
-  
+
+
   <router-view/>
 
+  <!-- <iframe width="420" height="345" src="https://youtu.be/VUyEPf-IvdM"> -->
+  <!-- </iframe> -->
+  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VUyEPf-IvdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
   <footer class="footer footer-standard pt50 pb10">
     <div class="container">
@@ -402,7 +406,7 @@
           Term & conditions
         </a>
       </li>
-      
+
     </ul>
   </div>
   <div class="col-lg-3 col-md-6 mb40">
@@ -480,7 +484,11 @@
 <style>
 body {
   font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-  background-image: url('/images/light-grey-terrazzo.png');
+  background-image: url('/images/tryme.jpeg'); 
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 </style>
 
