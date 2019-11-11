@@ -92,6 +92,13 @@
     <ul>
        <li v-for="healthy_option in food.healthy_options"> {{ healthy_option.name }} </li>
     </ul>
+    
+ <!-- <li v-for="healthy_option in food.healthy_options"> {{ healthy_option.name }} </li>
+ <div>
+      <router-link v-bind:to="heathy_option">
+        <h2>{{ healthy_option.name }}</h2>
+      </router-link>
+    </div> -->
 
     <div>
       <router-link v-bind:to=" '/foods/' + food.id + '/edit' ">Make Changes</router-link>

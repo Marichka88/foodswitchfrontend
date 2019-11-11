@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <div class="search-inline">
       <form>
         <input type="text" class="form-control" placeholder="Type and hit enter...">
@@ -9,6 +8,24 @@
       </form>
     </div><!--/search form-->
     <div class="container">
+      <vue-particles
+        color="#bbffbb"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="6"
+        linesColor="#ffbbff"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
