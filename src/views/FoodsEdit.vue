@@ -29,13 +29,12 @@
                   <input type="integer" class="form-control" v-model="food.sodium" placeholder="Sodium">
                 </div>
                  <div class="form-group">
-                  <!-- <input type="text" class="form-control" v-model="food.default_filter" placeholder="Default Filter"> -->
+                
                 </div>
                 <div class="form-group">
-                            <!-- <label for="exampleSelect1">Choose Your Filter</label> -->
                             <select class="form-control" id="exampleSelect1">
-                                <option>Please Choose the Filter</option>
                                 <option>SaltSwitch</option>
+                                <option>Please Choose the Filter from below:</option>
                                 <option>SugarSwitch</option>
                                 <option>FatSwitch</option>
                                 <option>EnergySwitch</option>

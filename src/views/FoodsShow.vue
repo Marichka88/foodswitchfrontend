@@ -11,7 +11,7 @@
         <span class="fa fa-star" v-bind:class="{checked: food.stars >= 4}"></span>
         <span class="fa fa-star" v-bind:class="{checked: food.stars >= 5}"></span>
         
-        <hr style="border:3px solid #f1f1f1">
+        <hr style="border:3px solid #ff9797">
 
         <h5>Energy: {{ food.energy }}</h5>
 
@@ -43,7 +43,7 @@
         <img class="img-show" v-bind:src="food.image_url">
       </div>  
     </div>
-    <hr style="border:3px solid #f1f1f1">
+    <hr style="border:3px solid #ff9797">
 
     <div class="bar-row mb-5">
       <div class="side">
@@ -112,7 +112,7 @@
   color: orange;
 }*/
 .contrast-bg {
-  background-color: white; 
+  background-color: blanchedalmond; 
   padding: 30px;
   margin-bottom: 30px;
 }

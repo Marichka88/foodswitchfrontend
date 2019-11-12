@@ -85,12 +85,12 @@
 
     <vue-particles
       class="particles-top"
-      color="#FFFF00"
+      color="#FF4500"
       :particleOpacity="0.7"
       :particlesNumber="90"
       shapeType="circle"
       :particleSize="6"
-      linesColor="#FF6D00"
+      linesColor="#FFFF00"
       :linesWidth="1"
       :lineLinked="true"
       :lineOpacity="0.4"
@@ -103,7 +103,7 @@
     >
     </vue-particles>
 
-    <div class="container">
+    <div class="container mb-4">
       <router-view/>
     </div>
 

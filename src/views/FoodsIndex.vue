@@ -2,12 +2,12 @@
   <div class="foods-index">
 
     <h1>
-      <p class="text-danger text-center p-4">Please Make Your Food Choice or Use a Search Box</p>
+      <p class="text-custom-1 text-center p-4">Please Make Your Food Choice or Use a Search Box</p>
     </h1>
 
     <form class="d-flex justify-content-center form-inline mb-4" v-on:submit.prevent="search()">
         <label class="sr-only" for="inlineFormInput">Search</label>
-        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" v-model="searchTerm" placeholder="Search by Name">
+        <input type="text" class="form-control mb-3 mr-sm-2 mb-sm-0" id="inlineFormInput" v-model="searchTerm" placeholder="Search by Name">
         <button type="submit" class="btn btn-success">Search</button>
     </form>
 
@@ -33,10 +33,9 @@
     </div>
     <div class="video-container">
       <div class="d-flex justify-content-center">
-        <iframe width="560" height="300" src="https://www.youtube.com/embed/VUyEPf-IvdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/VUyEPf-IvdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
@@ -44,7 +43,14 @@
 .video-container {
   margin: 30px 0px;
   background-color: white;
-  /*margin-bottom: 50px;*/
+}
+
+.text-custom-1 {
+  color: blanchedalmond;
+}
+
+.card {
+  background-color: blanchedalmond;
 }
 </style>
 
