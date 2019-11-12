@@ -66,7 +66,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <router-link class="navbar-brand" to="/"><img src="/images/apple.png" alt=""></router-link>
+        <router-link class="navbar-brand" to="/"><img src="/images/nutrition.png" alt=""></router-link>
         <div  id="navbarNavDropdown" class="navbar-collapse collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -85,7 +85,7 @@
 
     <vue-particles
       class="particles-top"
-      color="#FF4500"
+      color="#0000FF"
       :particleOpacity="0.7"
       :particlesNumber="90"
       shapeType="circle"
@@ -103,7 +103,7 @@
     >
     </vue-particles>
 
-    <div class="container mb-4">
+    <div class="container mb-3">
       <router-view/>
     </div>
 
@@ -250,7 +250,15 @@ body {
 
 
 <script>
-  
+export default {
+  mounted: function() {
+    setTimeout(function() {
+      var canvas = document.querySelector("#particles-js canvas");
+      canvas.height = "800";
+      console.log(canvas);
+    }, 25);
+  }
+}
 </script>
 
 

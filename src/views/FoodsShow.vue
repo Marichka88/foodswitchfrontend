@@ -112,7 +112,7 @@
   color: orange;
 }*/
 .contrast-bg {
-  background-color: blanchedalmond; 
+  background-color: lightgray; 
   padding: 30px;
   margin-bottom: 30px;
 }

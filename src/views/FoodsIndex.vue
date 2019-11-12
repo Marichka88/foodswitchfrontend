@@ -46,11 +46,11 @@
 }
 
 .text-custom-1 {
-  color: blanchedalmond;
+  color: dimgray;
 }
 
 .card {
-  background-color: blanchedalmond;
+  background-color: lightgray;
 }
 </style>
 

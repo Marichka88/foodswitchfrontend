@@ -3,7 +3,7 @@
 
     <div class="row pb30">
         <div class="col-lg-4 col-md-6 mr-auto ml-auto col-sm-8">
-            <h3 class="text-white text-center mb30">Edit Food</h3>
+            <h3 class="text-primary text-center mb30">Edit Food</h3>
             <ul>
               <li v-for="error in errors">{{ error }}</li>
             </ul>
