@@ -66,7 +66,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <router-link class="navbar-brand" to="/"><img src="/images/nutrition.png" alt=""></router-link>
+        <router-link class="navbar-brand" to="/"><img src="/images/diet.png" alt=""></router-link>
         <div  id="navbarNavDropdown" class="navbar-collapse collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -85,12 +85,12 @@
 
     <vue-particles
       class="particles-top"
-      color="#0000FF"
+      color="#FFFFFF"
       :particleOpacity="0.7"
-      :particlesNumber="90"
+      :particlesNumber="120"
       shapeType="circle"
       :particleSize="6"
-      linesColor="#FFFF00"
+      linesColor="#E0E0E0"
       :linesWidth="1"
       :lineLinked="true"
       :lineOpacity="0.4"
@@ -114,11 +114,11 @@
               <h3>Why eat well?</h3>
               <p>
                 We've all heard it before, but it's true: eating well is really good for you. When you eat a well-balanced diet:
-                your energy levels will be optimised
-                you’ll feel healthier andstronger
-                your immune system will be tougher
-                you’ll think more clearly and handle stress better
-                your chances of developing diabetes, cancer and cardiovascular disease will decrease.
+                your energy levels will be optimised,
+                you’ll feel healthier and stronger,
+                your immune system will be tougher,
+                you’ll think more clearly and handle stress better,
+                your chances of developing diabetes, cancer and cardiovascular disease will decrease
               </p>
               <a href="#" class="btn btn-white-outline btn-sm">A Healthy Outside Starts from the Inside</a>
             </div>
@@ -254,7 +254,7 @@ export default {
   mounted: function() {
     setTimeout(function() {
       var canvas = document.querySelector("#particles-js canvas");
-      canvas.height = "800";
+      canvas.height = "600";
       console.log(canvas);
     }, 25);
   }

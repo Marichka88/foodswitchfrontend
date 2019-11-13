@@ -2,7 +2,7 @@
   <div class="foods-index">
 
     <h1>
-      <p class="text-custom-1 text-center p-4">Please Make Your Food Choice or Use a Search Box</p>
+      <p class="text-custom-1 text-center p-4">Welcome to FoodSwitch, a healthy food alternative app. Please Make Your Food Choice or Use the Search Box</p>
     </h1>
 
     <form class="d-flex justify-content-center form-inline mb-4" v-on:submit.prevent="search()">
@@ -33,7 +33,7 @@
     </div>
     <div class="video-container">
       <div class="d-flex justify-content-center">
-        <iframe width="500" height="300" src="https://www.youtube.com/embed/VUyEPf-IvdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="550" height="300" src="https://www.youtube.com/embed/VUyEPf-IvdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
